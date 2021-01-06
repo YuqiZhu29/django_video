@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${self.title()}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" \
+          crossorigin="anonymous">
+    <link href="/static/dashboard/css/base.css" rel="stylesheet"/>
+    ${self.css()}
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" \
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" \
+        crossorigin="anonymous"></script>
+<%include file="nav.html"/>
+<div id="base-area">
+    <ul class="side-menu">
+        <li>Admin</li>
+        <li>User</li>
+        <li>Videos</li>
+    </ul>
+    <div class="base-content">
+        ${self.content()}
+    </div>
+</div>
+</body>
+${self.js()}
+</html>
+
+<%def name="title()"></%def>
+<%def name="js()"></%def>
+<%def name="css()"></%def>
+<%def name="content()"></%def>
